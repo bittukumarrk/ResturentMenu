@@ -1,0 +1,218 @@
+/* General body styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+    
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+.navbar{
+    background-color: rgba(32, 3, 4, 0.37);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 1000;
+    color: white;
+}
+.logo{
+    font-size: 2rem;
+    line-height: 80px;
+    padding: 0 80px;
+
+}
+.logo img{
+    height: 60px;
+}
+.navbar ul{
+
+    float: right;
+    margin-right: 1rem;
+    padding: 0;
+    position: relative;
+}
+.navbar ul li{
+    margin: 0 5px;
+    display: inline-block;
+    line-height: 80px;
+}
+.navbar ul li a{
+    color: #228b22;
+    text-decoration: none;
+    transition: opacity 0.5s;
+    font-size: 18px;
+    padding: 8px 14px;
+    border-radius: 4px;
+}
+a.active,a:hover{
+   
+    background-color: #eee8aa;
+    transition: .5s;
+    color: black;
+}
+.navbar a:hover{
+    opacity: 0.5;
+    background-color:#eee8aa;
+}
+#barTag{
+    height: 60px;
+    line-height: 80px;
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 40x;
+    display: none;
+   
+}
+#check{
+    display: none;
+}
+
+
+.hero{
+  
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* position: relative; */
+}
+#order {
+    position: absolute; /* Absolute positioning */
+    left: 50%; /* Centered horizontally */
+    top: 50%;
+    transform: translateX(-50%); /* Offset by half its width for perfect centering */
+    padding: 20px 30px;
+    background-color: rgba(20, 18, 18, 0.508);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+#order:hover{
+    transform: scale(0.5, 0.5);
+}
+.itemMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8; /* Light background color */
+}  
+
+.imgContener{
+    width: 25%;
+}
+.imgContener img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.foodSec{
+    max-width:500px;
+    min-height: 500px;
+    text-align: center;
+   
+   
+}
+.foodSec img{
+    width: 100%;
+    height: 100%;
+    padding-top: 16px;
+}
+.foodSec h1{
+    margin: 20px;
+    color: #808000;
+    cursor: pointer;
+}
+.toggle-content p{
+    background-color: #26010164;
+    padding: 12px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(197, 239, 135);
+    border-radius: 6px;
+}
+
+/* Initially hide the content */
+.toggle-content {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 1s, opacity 1s linear; 
+}
+
+/* Show content when the container is hovered */
+.hover-container:hover .toggle-content {
+    visibility: visible;
+    opacity: 1;
+}
+/* @media */
+
+@media(max-width:852px){
+    #barTag{
+        display: block;
+        font-size: 1rem;
+        line-height: 60px;
+        padding: 0 40px;
+    }
+    .logo{
+        font-size: 1rem;
+        line-height: 60px;
+        padding: 0 40px;
+    
+    }
+    ul{
+        position: fixed;
+        width: 50%;
+        min-height: 500px;
+        background-color: rgba(18, 18, 17, 0.408);
+        top: 80px;
+        left: -100%;
+        text-align: end;
+        transform: all .5s;
+    
+    }
+    .navbar ul li{
+        display: block;
+        margin: 30px 0;
+        line-height: 20px;
+    
+    }
+    .navbar ul li a{
+        font-size: 20px;
+    
+    }
+    .navbar ul li a{
+        font-size: 12px;
+        color: fuchsia;
+    }
+    a:hover,a.active{
+        background: none;
+        color: rgb(238, 15, 212);
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .foodSec{
+        max-width:300px;
+        min-height:300px;
+        text-align: center;
+        padding: 0 2rem;
+       
+    }
+    #order {
+        font-size: 10px;
+        padding: 10px 15px;
+    }
+}
